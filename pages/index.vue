@@ -11,10 +11,26 @@
     placeholder="Add a new task" 
     @keypress.enter="addTask">
   </div>
+
+  <div class="task">
+
+  </div>
 </template>
 
 <script>
 export default {
-  name: 'IndexPage'
+  data() {
+    return {
+      newTask: ''
+    }
+  },
+  methods: {
+    addTask() {
+      if (this.newTask) {
+        this.$store.commit('ADD_TASK', this.newTask);
+        this.newTask= ''
+      }
+    }
+  }
 }
 </script>
