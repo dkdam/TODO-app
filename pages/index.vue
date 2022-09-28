@@ -13,7 +13,7 @@
   </div>
 
   <div class="task">
-
+    {{ $store.state.task }}
   </div>
 </template>
 
