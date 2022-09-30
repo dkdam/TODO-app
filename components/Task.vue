@@ -3,14 +3,14 @@
         <div class="content">{{ task.content }}</div>
         <div class="buttons">
             <button>{{ task.done ? 'Undo' : 'Done' }}</button>
-            <button class="delete ">Delete</button>
+            <button class="delete">Delete</button>
         </div>
     </div>
 </template>
 
 <script>
     export default {
-
+        props: ['task']
     }
 </script>
 

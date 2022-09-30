@@ -10,10 +10,15 @@
     v-model="newTask" 
     placeholder="Add a new task" 
     @keypress.enter="addTask">
+    <button @click="addTask">Add</button>
   </div>
 
   <div class="task">
-    {{ $store.state.task }}
+    <Task
+    v-for="(task,i) in $store.state.tasks"
+    :key="i"
+    :task="task"
+    />
   </div>
 </template>
 
